@@ -15,7 +15,14 @@ public class BarbeiroDorminhoco {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Barbeiro b = new Barbeiro();
+        Thread tb = new Thread(b);
+        
+        Cliente c = new Cliente();
+        Thread tc = new Thread(c);
+        
+        tb.start();
+        tc.start();
     }
     
 }
